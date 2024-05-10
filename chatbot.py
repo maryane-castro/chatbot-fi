@@ -8,6 +8,14 @@ import pandas as pd
 import configparser
 import os
 
+"""
+    crie um arquivo .config.ini e coloque sua chave da google api
+    .config.ini
+    [DEFAULT]
+    GOOGLE_API_KEY='suachave-'
+
+"""
+
 config = configparser.ConfigParser()
 config.read(os.path.expanduser('.config.ini'))
 
