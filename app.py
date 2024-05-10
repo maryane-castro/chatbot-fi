@@ -34,8 +34,8 @@ def generate_response(prompt):
     return response.text
 
 def main():
-    st.title('Chat with Fundos Imobiliários Expert')
-    st.write('Welcome to the Fundos Imobiliários Expert chatbot!')
+    st.title('Chat para Fundos Imobiliários')
+    st.write('Bem vindo(a)!')
 
     st.write('Fundos Imobiliários Disponíveis:')
     num_companies = len(data['Nome Pregao'])
@@ -55,7 +55,7 @@ def main():
 
 
 
-    prompt = st.text_input('Digite sua pergunta (Exemplo: gostaria de saber sobre a empresa CIELO):')
+    prompt = st.text_input('Digite sua pergunta e espere alguns instantes...(Exemplo: gostaria de saber sobre a empresa CIELO):')
     if prompt:
         if prompt.lower() == 'fim':
             st.write('Obrigado por conversar com o Chatbot de Fundos Imobiliários!')
