@@ -106,7 +106,7 @@ class PDFExtractor:
 
         padrao_nome_pregao = re.search(r"Nome de Pregao: (.+?)\n", texto)
         if padrao_nome_pregao:
-            nome_pregao = padrao_nome_pregao.group(1)
+            nome_pregao = padrao_nome_pregao.group(1).lower()
         else:
             nome_pregao = None
 
@@ -343,8 +343,8 @@ chat = model.start_chat(history=[])
 print('Fundos Imobiliários Disponiveis:')
 for i in dados['Nome Pregao']:
   print(i)
-prompt = input("Esperando Prompt: ")
+prompt = input("Esperando Prompt: ").lower()
 while prompt != "fim":
-  response = chat.send_message(prompt_inicial + prompt)
+  response = chat.send_message(prompt_inicial + prompt).lower()
   print('Resposta: ', response.text)
   prompt = input("Esperando Prompt: ")
