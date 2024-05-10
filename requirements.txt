@@ -1,0 +1,5 @@
+google-generativeai 
+transformers 
+pyPDF2
+pandas
+streamlit
