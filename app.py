@@ -54,14 +54,10 @@ def main():
     st.table(df)
 
 
-
-    prompt = st.text_input('Digite sua pergunta e espere alguns instantes...(Exemplo: gostaria de saber sobre a empresa CIELO):')
+    prompt = st.text_input('Digite sua pergunta e espere alguns instantes...(Exemplo: gostaria de saber sobre a empresa CIELO):').lower()
     if prompt:
-        if prompt.lower() == 'fim':
-            st.write('Obrigado por conversar com o Chatbot de Fundos Imobiliários!')
-        else:
-            response = generate_response(prompt)
-            st.write('Resposta:', response)
+        response = generate_response(prompt).lower()
+        st.write('Resposta:', response)
 
 if __name__ == '__main__':
     main()
