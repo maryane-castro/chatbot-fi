@@ -1,4 +1,4 @@
-# 🤑 🏦 ChatBot para Fundos Imobiliários 💸
+# 🏦 ChatBot para Fundos Imobiliários 
 ### Acesse o link da página do chatbot no streamlit:
 
 https://chatbot-fi-amz5hwrvfdqu37onvlmjzz.streamlit.app/
