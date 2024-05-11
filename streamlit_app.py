@@ -14,7 +14,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 generation_config = {
     "candidate_count": 1,
-    "temperature": 1,
+    "temperature": 0.5,
 }
 
 
@@ -34,10 +34,16 @@ def generate_response(prompt):
     return response.text
 
 def main():
-    st.title('Chat para Fundos Imobiliários')
-    st.write('Bem vindo(a)!')
+    import streamlit as st
 
-    st.write('Fundos Imobiliários Disponíveis:')
+    col1, col2 = st.columns([1, 2])
+
+    with col1:
+        st.image('assets/google.png', width=150)
+    with col2:
+        st.title('Chatbot para Fundos Imobiliários')
+
+    st.write('Pregões Disponíveis:')
     num_companies = len(data['Nome Pregao'])
     num_cols = 4
     num_rows = -(-num_companies // num_cols)  
@@ -56,7 +62,7 @@ def main():
 
     prompt = st.text_input('Digite sua pergunta e espere alguns instantes...(Exemplo: gostaria de saber sobre a empresa CIELO):').lower()
     if prompt:
-        response = generate_response(prompt).lower()
+        response = generate_response(prompt.lower())
         st.write('Resposta:', response)
 
 if __name__ == '__main__':
