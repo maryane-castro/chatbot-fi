@@ -12,7 +12,7 @@ https://chatbot-fi-amz5hwrvfdqu37onvlmjzz.streamlit.app/
 
 <hr>
 
-# Problema
+## Problema
 Muitas pessoas têm vontade de investir em fundos, porém, devido à dificuldade de acessar informações confiáveis, não iniciam essa carreira. O projeto tem a finalidade de auxiliar pessoas a começar a investir em determinadas empresas com maior confiança.
 
 
