@@ -7,7 +7,7 @@ import unicodedata
 import pandas as pd
 import configparser
 import os
-
+import sys
 """
     crie um arquivo .config.ini e coloque sua chave da google api
     .config.ini
